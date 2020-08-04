@@ -16,10 +16,10 @@
 	 area class="6" means that this is the clickable area for the 5th key
 	 White keys are 45 pixels long. coords="x1,y1,x2,y2"-->
     <map name="pianomap">
-      <area class="6" shape="rect" coords="139,160,184,292" onclick="myFunction6()"/>
-      <area class="8" shape="rect" coords="184,160,229,292" onclick="myFunction8()" /> 
-      <area class="10" shape="rect" coords="229,160,276,292" onclick="myFunction10()"/>
-      <area class="12" shape="rect" coords="276,160,321,292" onclick="myFunction12()"/>
+      <area class="6" shape="rect" coords="139,160,184,292" onclick="alertKey()"/>
+      <area class="8" shape="rect" coords="184,160,229,292" onclick="alertKey()" /> 
+      <area class="10" shape="rect" coords="229,160,276,292" onclick="alertKey()"/>
+      <area class="12" shape="rect" coords="276,160,321,292" onclick="alertKey()"/>
     </map>
 
     <img src="Images\guitar.jpg" alt="">
@@ -30,17 +30,4 @@
 
 
 
-<script type="text/javascript">
-  function myFunction6() {
-    alert("you pressed 6");
-  }
-  function myFunction8() {
-    alert("you pressed 8");
-  }
-  function myFunction10() {
-    alert("you pressed 10");
-  }
-  function myFunction12() {
-    alert("you pressed 12");
-  }
-</script>
+<script src="code.js"></script>

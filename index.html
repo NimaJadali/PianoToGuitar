@@ -9,24 +9,30 @@
 
 
   <body>
-    <h1>This converts piano keys to guitar frets.</h1>
-    <img src="Images\piano.jpg" alt="HTML5 Icon" usemap="#pianomap">
-
-    <!-- This is the map for the piano. The map has areas that can be clicked that look invisible. 
-	 area class="6" means that this is the clickable area for the 5th key
-	 White keys are 45 pixels long. coords="x1,y1,x2,y2"-->
-    <map name="pianomap">
-      <area class="k" shape="rect" coords="94,160,139,292" onclick="alertKey(0, 4)">
-      <area class="k" shape="rect" coords="139,160,184,292" onclick="alertKey(0, 5)"/>
-      <area class="k" shape="rect" coords="170,0,196,155" onclick="alertKey(0, 6)">
-      <area class="k" shape="rect" coords="184,160,229,292" onclick="alertKey(0, 7)" /> 
-      <area class="k" shape="rect" coords="218,0,244,155" onclick="alertKey(0, 8)">
-      <area class="k" shape="rect" coords="229,160,276,292" onclick="alertKey(0, 9)"/>
-      <area class="k" shape="rect" coords="276,160,321,292" onclick="alertKey(0, 11)"/>
-    </map>
-
-    <img src="Images\guitar.jpg" alt="" width="1600">
-
+    <div class="title-wrapper">
+      <h1>This converts piano keys to guitar frets by Drew and Nima.</h1>
+    </div>
+    <div class="content-container">
+      <div class="img-wrapper">
+        <img src="Images\piano.jpg" alt="HTML5 Icon" usemap="#pianomap">
+      </div>
+      <!-- This is the map for the piano. The map has areas that can be clicked that look invisible. 
+      area class="6" means that this is the clickable area for the 5th key
+      White keys are 45 pixels long. coords="x1,y1,x2,y2"-->
+      <map name="pianomap">
+	<area class="k" shape="rect" coords="94,160,139,292" onclick="alertKey(0, 4)">
+        <area class="k" shape="rect" coords="139,160,184,292" onclick="alertKey(0, 5)"/>
+	<area class="k" shape="rect" coords="170,0,196,292" onclick="alertKey(0, 6)"/>
+        <area class="k" shape="rect" coords="184,160,229,292" onclick="alertKey(0, 7)" /> 
+	<area class="k" shape="rect" coords="218,0,244,155" onclick="alertKey(0, 8)">
+        <area class="k" shape="rect" coords="229,160,276,292" onclick="alertKey(0, 9)"/>
+        <area class="k" shape="rect" coords="276,160,321,292" onclick="alertKey(0, 11)"/>
+      </map>
+      
+      <div class="img-wrapper">
+        <img src="Images\guitar.jpg" alt="">
+      </div>
+    </div>
     <script src="code.js"></script>
   </body>
 

@@ -1,3 +1,3 @@
-function alertKey() {
-    alert("you pressed a key!");
+function alertKey(num, note) {
+    alert("you pressed key #" + num + " and its note is " + note);
 }

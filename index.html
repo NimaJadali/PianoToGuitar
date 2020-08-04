@@ -6,43 +6,41 @@
     <title>Piano to Guitar</title>
     <link rel="stylesheet" href="styles.css">
   </head>
+
+
   <body>
     <h1>This converts piano keys to guitar frets.</h1>
-    <img src="Images\piano.jpg" alt="HTML5 Icon" usemap="#pianomap"/>
+    <img src="Images\piano.jpg" alt="HTML5 Icon" usemap="#pianomap">
 
     <!-- This is the map for the piano. The map has areas that can be clicked that look invisible. 
 	 area class="6" means that this is the clickable area for the 5th key
 	 White keys are 45 pixels long. coords="x1,y1,x2,y2"-->
     <map name="pianomap">
-      <area class="6" shape="rect" coords="139,160,184,292"  href="" />
-      <area class="8" shape="rect" coords="184,160,229,292" href="" /> 
-      <area class="10" shape="rect" coords="229,160,276,292" href="" />
-      <area class="12" shape="rect" coords="276,160,321,292" href="" />
+      <area class="6" shape="rect" coords="139,160,184,292" onclick="myFunction6()"/>
+      <area class="8" shape="rect" coords="184,160,229,292" onclick="myFunction8()" /> 
+      <area class="10" shape="rect" coords="229,160,276,292" onclick="myFunction10()"/>
+      <area class="12" shape="rect" coords="276,160,321,292" onclick="myFunction12()"/>
     </map>
 
-    <img src="Images\guitar.jpg" alt="HTML5 Icon" width="1600">
+    <img src="Images\guitar.jpg" alt="" width="1600">
 
   </body>
 
 </html>
 
+
+
 <script type="text/javascript">
-
-<!-- when the 6th key is clicked, the following javascript code will execute-->
-  $(".6").on("click", function(e){
-    e.preventDefault();
-    <!-- insert javascript code that lights up the corresponding guitar fret-->
-  });
-
-  $(".8").on("click", function(e){
-    e.preventDefault();
-  });
-
-  $(".10").on("click", function(e){
-    e.preventDefault();
-  });
-
-  $(".12").on("click", function(e){
-    e.preventDefault();
-  });
+  function myFunction6() {
+    alert("you pressed 6");
+  }
+  function myFunction8() {
+    alert("you pressed 8");
+  }
+  function myFunction10() {
+    alert("you pressed 10");
+  }
+  function myFunction12() {
+    alert("you pressed 12");
+  }
 </script>

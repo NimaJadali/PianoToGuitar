@@ -9,7 +9,7 @@
   </head>
 
 
-  <body>
+  <body onload="spaceCircles()">
     <div class="title-wrapper">
       <h1>This converts piano keys to guitar frets by Drew and Nima.</h1>
     </div>
@@ -23,12 +23,12 @@
       <map name="pianomap">
 
 	<!-- The first area calls two functions if clicked -->
-	<area class="k" shape="rect" coords="94,161,139,294" onclick="alertKey(0, 4);toggleImage('circ1');">
+	<area class="k" shape="rect" coords="94,161,139,294" onclick="alertKey(0, 4)">
 
-        <area class="k" shape="rect" coords="139,161,184,294" onclick="alertKey(0, 5)"/>
-        <area class="k" shape="rect" coords="170,0,197,162" onclick="alertKey(0, 6)"/>
-        <area class="k" shape="rect" coords="184,161,229,294" onclick="alertKey(0, 7)" />
-        <area class="k" shape="rect" coords="217,0,244,162" onclick="alertKey(0, 8)">
+        <area class="k" shape="rect" coords="139,161,184,294" onclick="toggleImage(0, 5);"/>
+        <area class="k" shape="rect" coords="170,0,197,162" onclick="toggleImage(0, 6)"/>
+        <area class="k" shape="rect" coords="184,161,229,294" onclick="toggleImage(0, 7)" />
+        <area class="k" shape="rect" coords="217,0,244,162" onclick="toggleImage(0, 8)">
         <area class="k" shape="rect" coords="229,161,276,294" onclick="alertKey(0, 9)"/>
         <area class="k" shape="rect" coords="263,0,289,162" onclick="alertKey(0, 10)">
         <area class="k" shape="rect" coords="276,161,321,294" onclick="alertKey(0, 11)"/>
@@ -46,43 +46,46 @@
         <area class="k" shape="rect" coords="584,0,608,162" onclick="alertKey(1, 10)"/>
         <area class="k" shape="rect" coords="596,161,641,294" onclick="alertKey(1, 11)"/>
 
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 18)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 19)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 20)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 21)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 22)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 23)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 24)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 25)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 26)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 27)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 28)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 29)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 0)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 1)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 2)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 3)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 4)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 5)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 6)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 7)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 8)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 9)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 10)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(2, 11)"/>
 
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 30)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 31)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 32)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 33)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 34)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 35)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 36)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 37)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 38)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 39)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 40)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 41)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 0)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 1)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 2)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 3)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 4)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 5)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 6)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 7)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 8)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 9)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 10)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(3, 11)"/>
 
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(4, 42)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(4, 43)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(4, 44)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(4, 45)"/>
-        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(4, 46)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(4, 0)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(4, 1)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(4, 2)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(4, 3)"/>
+        <area class="k" shape="rect" coords="o_o,161,o_o,294" onclick="alertKey(4, 4)"/>
       </map>
       
       <div class="img-wrapper">
         <img class="back" src="Images\guitar.jpg" alt="">
-	<img class="front" src="Images\circle.png" id="circ1" state="0">  <!-- the state attribute
+	<img class="front" src="Images\circle.png" id="0, 1" state="0">  <!-- the state attribute
 			                                                  determines visibility of circle  -->
+	<img class="front" src="Images\circle.png" id="0, 2" state="0">
+	<img class="front" src="Images\circle.png" id="0, 3" state="0">
+	<img class="front" src="Images\circle.png" id="0, 4" state="0">
       </div>
     </div>
 
@@ -103,6 +106,7 @@
 
       
     <script src="code.js"></script>
+    
   </body>
 
 </html>

@@ -15,6 +15,25 @@ img {
 
 .img-wrapper {
     padding: 10px;
+
+
+/* Everything below this comment is what I had to add to let the green circle overlap
+   the guitar image */
+    position: relative;
+    top: 0;     
+    left: 0;
+}
+
+.back {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.front {
+  position: absolute;
+  top: 185px;
+  left: 50px;
 }
 
 .content-container {
@@ -23,4 +42,3 @@ img {
     align-items: center;
     justify-content: center;
 }
-

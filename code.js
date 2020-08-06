@@ -26,3 +26,15 @@ function getWX2(numb) {
     var x2 = 139 + (numb * 45);
     //return num.toString((139 + (numb * 45)));
 }
+
+function toggleImage(imageId) {
+    img = document.getElementById(imageId);
+
+    if (img.getAttribute("state") == 0) {   // if state = 0, the circle is currently visible
+	img.style.visibility = "hidden";
+	img.setAttribute("state", 1);
+    } else {
+	img.style.visibility = "visible"; // if state = 1, the circle is currently hidden
+	img.setAttribute("state", 0);
+    }
+}

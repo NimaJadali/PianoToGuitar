@@ -22,7 +22,7 @@
       White keys are 45 pixels long. coords="x1,y1,x2,y2"-->
       <map name="pianomap">
 
-	<area class="k" shape="rect" coords="94,161,139,294" onclick="alertKey(0, 4)">
+	      <area class="k" shape="rect" coords="94,161,139,294" onclick="alertKey(0, 4)">
         <area class="k" shape="rect" coords="139,161,184,294" onclick="toggleImage(0, 5);"/>
         <area class="k" shape="rect" coords="170,0,197,162" onclick="toggleImage(0, 6)"/>
         <area class="k" shape="rect" coords="184,161,229,294" onclick="toggleImage(0, 7)" />
@@ -77,15 +77,13 @@
         <area class="k" shape="rect" coords="1373,163,1419,294" onclick="alertKey(4, 4)"/>
       </map>
       
-    <div class="img-wrapper">
-      <img class="back" src="Images\guitar.jpg" alt="">
-      <!-- the state attribute determines visibility of circle  -->
-      
-      <button class="front" id="0, 1" state="0">F</button>
-      <button class="front" id="0, 2" state="0">F#</button>
-      <button class="front" id="0, 3" state="0">G</button>
-      <button class="front" id="0, 4" state="0">G#</button>
-
+      <div class="img-wrapper">
+        <img class="back" src="Images\guitar.jpg" alt="">
+        <!-- the state attribute determines visibility of circle  -->
+        <button class="front" id="0, 1" state="0">F</button>
+        <button class="front" id="0, 2" state="0">F#</button>
+        <button class="front" id="0, 3" state="0">G</button>
+        <button class="front" id="0, 4" state="0">G#</button>
       </div>
     </div>
     <script src="code.js"></script>

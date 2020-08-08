@@ -12,36 +12,40 @@ function alertKey(octave, num) {
 	fret = pianoSum % 5;
     }
 
-    alert("octave: " + octave + "   num: " + num + "\n"
-    + "corresponding string: " + string + "    corresponding fret: " + fret);
+    // alert("octave: " + octave + "   num: " + num + "\n"
+    //+ "corresponding string: " + string + "    corresponding fret: " + fret);
     var output = string + ", " + fret;
     //alert(output);
     return output;
 }
 
+/*
 function getWX1(numb) {
     var x1 = 94 + (numb * 45);
     alert("this was called");
     //return 321 + ",163," + 366 + ",294";
     return x1;
 }
+*/
 
+/*
 function getWX2(numb) {
     var x2 = 139 + (numb * 45);
     //return num.toString((139 + (numb * 45)));
 }
+*/
 
 // changes the visibility attribute of the circle pngs from hidden to visible
-function toggleImage(octave, num) {
+function toggleButton(octave, num) {
     id = alertKey(octave, num);
-    img = document.getElementById(id);
+    button = document.getElementById(id);
 
-    if (img.getAttribute("state") == 1) {   // if state = 1, the circle is currently visible
-	img.style.visibility = "hidden";
-	img.setAttribute("state", 0);
+    if (button.getAttribute("state") == 1) {   // if state = 1, the circle is currently visible
+	button.style.visibility = "hidden";
+	button.setAttribute("state", 0);
     } else {
-	img.style.visibility = "visible"; // if state = 0, the circle is currently hidden
-	img.setAttribute("state", 1);
+	button.style.visibility = "visible"; // if state = 0, the circle is currently hidden
+	button.setAttribute("state", 1);
     }
 }
 

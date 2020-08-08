@@ -23,10 +23,10 @@
       <map name="pianomap">
 
 	      <area class="k" shape="rect" coords="94,161,139,294" onclick="alertKey(0, 4)">
-        <area class="k" shape="rect" coords="139,161,184,294" onclick="toggleImage(0, 5);"/>
-        <area class="k" shape="rect" coords="170,0,197,162" onclick="toggleImage(0, 6)"/>
-        <area class="k" shape="rect" coords="184,161,229,294" onclick="toggleImage(0, 7)" />
-        <area class="k" shape="rect" coords="217,0,244,162" onclick="toggleImage(0, 8)">
+        <area class="k" shape="rect" coords="139,161,184,294" onclick="toggleButton(0, 5);"/>
+        <area class="k" shape="rect" coords="170,0,197,162" onclick="toggleButton(0, 6)"/>
+        <area class="k" shape="rect" coords="184,161,229,294" onclick="toggleButton(0, 7)" />
+        <area class="k" shape="rect" coords="217,0,244,162" onclick="toggleButton(0, 8)">
         <area class="k" shape="rect" coords="229,161,276,294" onclick="alertKey(0, 9)"/>
         <area class="k" shape="rect" coords="263,0,289,162" onclick="alertKey(0, 10)">
         <area class="k" shape="rect" coords="276,161,321,294" onclick="alertKey(0, 11)"/>
@@ -80,10 +80,11 @@
       <div class="img-wrapper">
         <img class="back" src="Images\guitar.jpg" alt="">
         <!-- the state attribute determines visibility of circle  -->
-        <button class="front" id="0, 1" state="0">F</button>
-        <button class="front" id="0, 2" state="0">F#</button>
-        <button class="front" id="0, 3" state="0">G</button>
-        <button class="front" id="0, 4" state="0">G#</button>
+        <button class="front" id="0, 1" state="0" onclick="toggleButton(0, 5)">F</button>
+        <button class="front" id="0, 2" state="0" onclick="toggleButton(0, 6)">F<sup>#</sup></button>
+        <button class="front" id="0, 3" state="0" onclick="toggleButton(0, 7)">G</button>
+        <button class="front" id="0, 4" state="0" onclick="toggleButton(0, 8)">G<sup>#</sup></button>
+        </div>
       </div>
     </div>
     <script src="code.js"></script>

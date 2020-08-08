@@ -21,8 +21,8 @@ function alertKey(octave, num) {
 
 function getWX1(numb) {
     var x1 = 94 + (numb * 45);
-    alert("this was called")
-    //return num.toString((94 + (numb * 45)));
+    alert("this was called");
+    //return 321 + ",163," + 366 + ",294";
     return x1;
 }
 

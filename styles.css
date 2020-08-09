@@ -2,31 +2,37 @@ body {
     margin: 0px;
 }
 
+h1 {
+    font-size: 2vw;
+}
+
 .title-wrapper {
     padding-left: 1%;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
     user-select: none;
 }
 
 .img-wrapper {
-    padding: 10px;
+    padding: .5vw;
+    width: 90%;
+    height: auto;
 
 /* Everything below this comment is what I had to add to let the green circle overlap
    the guitar image */
-   position: relative;
-   top: 0;     
-   left: 0;
+    position: relative;
+    top: 0;     
+    left: 0;
 }
 
 button {
     background-color: #4CAF50;
     border: none;
-    max-width: 2%;
+    max-width: 2vw;
     color: white;
     text-align: center;
     display: inline-block;
@@ -43,10 +49,11 @@ button {
     max-width: 100%;
 }
 
+/* Guitar image is 1600 x 300 so vw = pixel/1600 */
 .front {
   position: absolute;
-  top: 185px;
-  left: 50px;
+  top: 11.5625vw;
+  left: 3.125vw;
 }
 
 .content-container {

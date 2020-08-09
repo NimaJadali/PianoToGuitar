@@ -59,11 +59,11 @@ function spaceCircles() {
 	circleArr[i].style.visibility = "hidden";
 
 	if (i <= 2) {
-	    space = 50 + (85 * i);
+	    space = 3.125 + (5.3125 * i);
 	} else if (i < 4) {   // as the frets move up the neck, the spacing increment needs to decrease since the frets get smaller
-	    space = 220 + (70 * (i - 2));
+	    space = 13.75 + (4.375 * (i - .125));
 	}
 	//var spaceStr = num.toString(space);
-	circleArr[i].style.left = space + "px";
+	circleArr[i].style.left = space + "vw";
     }
 }

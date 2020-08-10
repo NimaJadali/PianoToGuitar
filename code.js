@@ -12,8 +12,8 @@ function alertKey(octave, num) {
 	fret = pianoSum % 5;
     }
 
-     alert("octave: " + octave + "   num: " + num + "\n"
-    + "corresponding string: " + string + "    corresponding fret: " + fret);
+    //alert("octave: " + octave + "   num: " + num + "\n"
+    //+ "corresponding string: " + string + "    corresponding fret: " + fret);
     var output = string + ", " + fret;
     //alert(output);
     return output;
@@ -39,7 +39,6 @@ function getWX2(numb) {
 function toggleButton(octave, num) {
     id = alertKey(octave, num);
     button = document.getElementById(id);
-
     if (button.getAttribute("state") == 1) {   // if state = 1, the circle is currently visible
 	button.style.visibility = "hidden";
 	button.setAttribute("state", 0);
@@ -50,20 +49,36 @@ function toggleButton(octave, num) {
 }
 
 // spaceCircles() is called on page load to space out green circles and set them to "hidden"
-function spaceCircles() {
+function spaceCircles(className) {
     
-    var circleArr = document.getElementsByClassName("front");
+    var circleArr = document.getElementsByClassName(className);
     var space = 0;
     //alert("space!");
     for (var i = 0; i < circleArr.length; i++) {
+	
 	circleArr[i].style.visibility = "hidden";
 
-	if (i <= 2) {
-	    space = 3.125 + (5.3125 * i);
-	} else if (i < 4) {   // as the frets move up the neck, the spacing increment needs to decrease since the frets get smaller
-	    space = 13.75 + (4.375 * (i - .125));
+	if (i == 0) {
+	    space = 0;
+	} else if (i == 1) {
+	    space = 3.8;
+	} else if (i == 2) {
+	    space = 10.75;
+	} else if (i == 3) {
+	    space = 17;
+	} else if (i == 4) {
+	    space = 22.7;
 	}
 	//var spaceStr = num.toString(space);
 	circleArr[i].style.left = space + "vw";
     }
+}
+
+function spaceAllCircles() {
+    spaceCircles("string0");
+    spaceCircles("string1");
+    spaceCircles("string2");
+    spaceCircles("string3");
+    spaceCircles("string4");
+    spaceCircles("string5");
 }

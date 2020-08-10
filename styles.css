@@ -50,11 +50,42 @@ button {
 }
 
 /* Guitar image is 1600 x 300 so vw = pixel/1600 */
-.front {
+.string0 {
   position: absolute;
-  top: 11.5625vw;
+  top: 14.25vw;
+  left: 3.125vw;
+ }
+
+.string1 {
+  position: absolute;
+  top: 11.75vw;
   left: 3.125vw;
 }
+
+.string2 {
+  position:absolute;
+  top: 9.4vw;
+  left: 3.125vw;
+}
+
+.string3 {
+  position:absolute;
+  top: 6.8vw;
+  left: 3.125vw;
+}
+
+.string4 {
+  position:absolute;
+  top: 4.25vw;
+  left: 3.125vw;
+}
+
+.string5 {
+  position:absolute;
+  top: 1.8vw;
+  left: 3.125vw;
+}
+
 
 .content-container {
     display: flex;

@@ -93,3 +93,16 @@ button {
     align-items: center;
     justify-content: center;
 }
+
+button[octave="0"] {
+  background-color: orange;
+}
+
+button[octave="1"] {
+  background-color: #0095FF;
+}
+
+button[octave="2"] {
+  background-color: #4CAF50;
+}
+

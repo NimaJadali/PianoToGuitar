@@ -106,3 +106,10 @@ button[octave="2"] {
   background-color: #4CAF50;
 }
 
+button[octave="3"] {
+  background-color: #FFC4E6;
+}
+
+button[octave="4"] {
+  background-color: #FFF700;
+}

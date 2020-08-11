@@ -3,7 +3,7 @@ function alertKey(octave, num) {
     var fret = 0;
     var pianoSum = (octave * 12) + num - 4;
 
-    // accounts for the highest string
+    //accounts for the highest string
     if ((octave == 2 && num > 8) || octave > 2) {
 	string = 5;
 	fret = ((octave - 2) * 12) + num - 4;
@@ -82,7 +82,48 @@ function spaceCircles(className) {
 	    space = 17;
 	} else if (i == 4) {
 	    space = 22.7;
+	} else if (i == 5) {
+	    space = 28.35;
+	} else if (i == 6) {
+	    space = 33.5;
+	} else if (i == 7) {
+	    space = 38.5;
+	} else if (i == 8) {
+	    space = 43.15;
+	} else if (i == 9) {
+	    space = 47.5;
+	} else if (i == 10) {
+	    space = 51.5;
+	} else if (i == 11) {
+	    space = 55.25;
+	} else if (i == 12) {
+	    space = 59.1;
+	} else if (i == 13) {
+	    space = 62.6;
+	} else if (i == 14) {
+	    space = 65.75;
+	} else if (i == 15) {
+	    space = 68.77;
+	} else if (i == 16) {
+	    space = 71.52;
+	} else if (i == 17) {
+	    space = 74.18;
+	} else if (i == 18) {
+	    space = 76.72;
+	} else if (i == 19) {
+	    space = 79.25;
+	} else if (i == 20) {
+	    space = 81.53;
+	} else if (i == 21) {
+	    space = 83.55;
+	} else if (i == 22) {
+	    space = 85.35;
+	} else if (i == 23) {
+	    space = 87.05;
+	} else if (i == 24) {
+	    space = space = 88.8;
 	}
+
 	//var spaceStr = num.toString(space);
 	circleArr[i].style.left = space + "vw";
     }

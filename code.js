@@ -7,6 +7,20 @@ function alertKey(octave, num) {
     if ((octave == 2 && num > 8) || octave > 2) {
 	string = 5;
 	fret = ((octave - 2) * 12) + num - 4;
+    } else if (octave == 1 && num == 11) {
+	string = 4;
+	fret = 0;
+    } else if (octave == 2) { // use hardcoding to account for 3rd string's only going up to 3rd fret
+	if (num < 4) {
+	    string = 4;
+	    fret = (pianoSum % 5) + 1;
+	} else if (num == 4) {
+	    string = 5;
+	    fret = 0;
+	} else if (num > 4) {
+	    string = 5;
+	    fret = (pianoSum % 5) + 1;
+	}
     } else {
 	string = Math.floor(pianoSum / 5);
 	fret = pianoSum % 5;

@@ -30,7 +30,6 @@ img {
 }
 
 button {
-    background-color: #4CAF50;
     border: none;
     max-width: 2vw;
     color: white;
@@ -86,6 +85,9 @@ button {
   left: 3.125vw;
 }
 
+button[s="1"] {
+  font-size: 2vh;
+}
 
 .content-container {
     display: flex;

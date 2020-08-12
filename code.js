@@ -60,6 +60,7 @@ function toggleButton(octave, num) {
 	button.style.visibility = "visible"; // if state = 0, the circle is currently hidden
 	button.setAttribute("state", 1);
     }
+    playSound(octave, num);
 }
 
 // spaceCircles() is called on page load to space out green circles and set them to "hidden"
@@ -136,4 +137,9 @@ function spaceAllCircles() {
     spaceCircles("string3");
     spaceCircles("string4");
     spaceCircles("string5");
+}
+
+function playSound(octave, num) {
+    var audio = new Audio("Audio/" + octave + "," + num + ".mp3");
+    audio.play();
 }

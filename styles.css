@@ -85,6 +85,18 @@ button {
   left: 3.125vw;
 }
 
+.white {
+  position:absolute;
+  top: 12.5vw;
+  left: 6vw;
+}
+
+.black {
+  position:absolute;
+  top: 6vw;
+  left: 9.8vw;
+}
+
 button[s="1"] {
   font-size: 2vh;
 }

@@ -33,34 +33,26 @@ function alertKey(octave, num) {
     return output;
 }
 
-/*
-function getWX1(numb) {
-    var x1 = 94 + (numb * 45);
-    alert("this was called");
-    //return 321 + ",163," + 366 + ",294";
-    return x1;
-}
-*/
-
-/*
-function getWX2(numb) {
-    var x2 = 139 + (numb * 45);
-    //return num.toString((139 + (numb * 45)));
-}
-*/
 
 // changes the visibility attribute of the circle pngs from hidden to visible
 function toggleButton(octave, num) {
+    pianoButton = document.getElementById("p" + octave + ", " + num);
     id = alertKey(octave, num);
     button = document.getElementById(id);
     if (button.getAttribute("state") == 1) {   // if state = 1, the circle is currently visible
 	button.style.visibility = "hidden";
 	button.setAttribute("state", 0);
+
+	pianoButton.style.visibility = "hidden";
+        pianoButton.setAttribute("state", 0);
     } else {
 	button.style.visibility = "visible"; // if state = 0, the circle is currently hidden
 	button.setAttribute("state", 1);
+	pianoButton.style.visibility = "visible"; 
+        pianoButton.setAttribute("state", 1);
+	playSound(octave, num);
     }
-    playSound(octave, num);
+    //playSound(octave, num);
 }
 
 // spaceCircles() is called on page load to space out green circles and set them to "hidden"
@@ -122,12 +114,14 @@ function spaceCircles(className) {
 	} else if (i == 23) {
 	    space = 87.05;
 	} else if (i == 24) {
-	    space = space = 88.8;
+	    space = 88.8;
 	}
 
 	//var spaceStr = num.toString(space);
 	circleArr[i].style.left = space + "vw";
     }
+
+    
 }
 
 function spaceAllCircles() {
@@ -137,9 +131,50 @@ function spaceAllCircles() {
     spaceCircles("string3");
     spaceCircles("string4");
     spaceCircles("string5");
+    //spaceBlackButtons();
+    spaceWhiteButtons();
+    spaceBlackButtons();
 }
 
 function playSound(octave, num) {
     var audio = new Audio("Audio/" + octave + "," + num + ".mp3");
     audio.play();
+}
+
+function spaceWhiteButtons() {
+    var whiteButtArr = document.getElementsByClassName("white");
+
+    var space = 6;
+
+    for (var i = 0; i < whiteButtArr.length; i++) {
+        whiteButtArr[i].style.visibility = "hidden";
+	whiteButtArr[i].style.left = space + "vw";
+	space = space + 2.573;
+    }
+}
+
+function spaceBlackButtons() {
+    var blackButtArr = document.getElementsByClassName("black");
+    var space = 9.95;
+    var pad = 9.95;
+    
+    for (var i = 0; i < blackButtArr.length; i = i + 5) {
+	//space = pad;
+	blackButtArr[i].style.left = space + "vw";
+	space = space + 2.562;
+	blackButtArr[i + 1].style.left = space + "vw";
+        space = space + 2.562;
+	blackButtArr[i + 2].style.left = space + "vw";
+        space = space + 5.13;
+	blackButtArr[i + 3].style.left = space + "vw";
+        space = space + 2.562;
+	blackButtArr[i + 4].style.left = space + "vw";
+        space = space + 5.17; 
+
+	blackButtArr[i].style.visibility = "hidden";
+	blackButtArr[i + 1].style.visibility = "hidden";
+	blackButtArr[i + 2].style.visibility = "hidden";
+	blackButtArr[i + 3].style.visibility = "hidden";
+	blackButtArr[i + 4].style.visibility = "hidden";
+    }    
 }

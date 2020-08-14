@@ -36,22 +36,47 @@ function alertKey(octave, num) {
 
 // changes the visibility attribute of the circle pngs from hidden to visible
 function toggleButton(octave, num) {
-    pianoButton = document.getElementById("p" + octave + ", " + num);
-    id = alertKey(octave, num);
-    button = document.getElementById(id);
-    if (button.getAttribute("state") == 1) {   // if state = 1, the circle is currently visible
-	button.style.visibility = "hidden";
-	button.setAttribute("state", 0);
+    var pianoButton = document.getElementById("p" + octave + ", " + num);
+    var id = alertKey(octave, num);
+    var button;
+    var  string = parseInt(id);
+    var fret = parseInt(id.substring(id.indexOf(" ") + 1));
+    var firstBool = 1;  // marks if this is the first iteration of the while loop to prevent repeating actions 
+    //alert(string + " " + fret);
+    while (string >= 0) {
+	
+        button = document.getElementById(id);
+	if (button.getAttribute("state") == 1) {   // if state = 1, the circle is currently visible
+	    button.style.visibility = "hidden";
+	    button.setAttribute("state", 0);
+	    
+	    if (firstBool == 1) {
+		pianoButton.style.visibility = "hidden";
+		pianoButton.setAttribute("state", 0);
+		firstBool = 0;
+	    }
+	    
+	} else {
+	    button.style.visibility = "visible"; // if state = 0, the circle is currently hidden
+	    button.setAttribute("state", 1);
 
-	pianoButton.style.visibility = "hidden";
-        pianoButton.setAttribute("state", 0);
-    } else {
-	button.style.visibility = "visible"; // if state = 0, the circle is currently hidden
-	button.setAttribute("state", 1);
-	pianoButton.style.visibility = "visible"; 
-        pianoButton.setAttribute("state", 1);
-	playSound(octave, num);
-    }
+	    if (firstBool == 1) {
+		pianoButton.style.visibility = "visible";
+		pianoButton.setAttribute("state", 1);
+		playSound(octave, num);
+		firstBool = 0;
+	    }
+	}
+	if (string == 4) {
+	    string = string - 1;
+	    fret = fret + 4;
+	} else {
+	    string = string - 1;
+	    fret = fret + 5;
+	}
+	id = "s" + string + ", " + fret;
+    } // while
+
     //playSound(octave, num);
 }
 

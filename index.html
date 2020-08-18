@@ -138,7 +138,7 @@
       </map>
       
       <div class="img-wrapper">
-        <img class="back" src="Images\guitar.jpg" alt="">
+        <img class="back" src="Images\guitar.jpg" usemap="#guitarmap" alt="">
         <!-- the state attribute determines visibility of circle  -->
 	<button class="string0" id="0, 0" state="0" octave="0" onclick="toggleButton(0, 4)">E</button>
         <button class="string0" id="0, 1" state="0" octave="0" onclick="toggleButton(0, 5)">F</button>
@@ -333,6 +333,40 @@
       </div>
       </div>
     </div>
+
+
+    <map name="guitarmap">
+
+      <area class="g" shape="rect" coords="0,237,20,300" onclick="toggleButton(0, 4)">
+      <area class="g" shape="rect" coords="21,237,136,300" onclick="toggleButton(0, 5);"/>
+      <area class="g" shape="rect" coords="146,237,252,300" onclick="toggleButton(0, 6)"/>
+      <area class="g" shape="rect" coords="261,237,357,300" onclick="toggleButton(0, 7)" />
+      <area class="g" shape="rect" coords="366,237,460,300" onclick="toggleButton(0, 8)">
+      <area class="g" shape="rect" coords="470,237,557,300" onclick="toggleButton(0, 9)"/>
+      <area class="g" shape="rect" coords="567,237,647,300" onclick="toggleButton(0, 10)">
+      <area class="g" shape="rect" coords="655,237,730,300" onclick="toggleButton(0, 11)"/>
+
+      <area class="g" shape="rect" coords="740,237,810,300" onclick="toggleButton(1, 0)">
+      <area class="g" shape="rect" coords="820,237,888,300" onclick="toggleButton(1, 1);"/>
+      <area class="g" shape="rect" coords="895,237,952,300" onclick="toggleButton(1, 2)"/>
+      <area class="g" shape="rect" coords="962,237,1019,300" onclick="toggleButton(1, 3)" />
+      <area class="g" shape="rect" coords="1028,237,1084,300" onclick="toggleButton(1, 4)">
+      <area class="g" shape="rect" coords="1092,237,1145,300" onclick="toggleButton(1, 5)"/>
+      <area class="g" shape="rect" coords="1154,237,1201,300" onclick="toggleButton(1, 6)">
+      <area class="g" shape="rect" coords="1210,237,1252,300" onclick="toggleButton(1, 7)"/>
+
+      <area class="g" shape="rect" coords="1262,237,1300,300" onclick="toggleButton(1, 8)">
+      <area class="g" shape="rect" coords="1309,237,1346,300" onclick="toggleButton(1, 9);"/>
+      <area class="g" shape="rect" coords="1357,237,1393,300" onclick="toggleButton(1, 10)"/>
+      <area class="g" shape="rect" coords="1400,237,1436,300" onclick="toggleButton(1, 11)" />
+      <area class="g" shape="rect" coords="1441,237,1477,300" onclick="toggleButton(2, 0)">
+      <area class="g" shape="rect" coords="1483,237,1506,300" onclick="toggleButton(2, 1)"/>
+      <area class="g" shape="rect" coords="1514,237,1539,300" onclick="toggleButton(2, 2)">
+      <area class="g" shape="rect" coords="1547,237,1569,300" onclick="toggleButton(2, 3)"/>
+      <area class="g" shape="rect" coords="1576,237,1600,300" onclick="toggleButton(2, 4)"/>
+
+
+    </map>
     <script src="code.js"></script>
 
     <!-- responsive image map jquery plugin-->
